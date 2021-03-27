@@ -6,8 +6,8 @@ static, built by wordpress with Elementor plugin
 can be modified slightly
 
 
-## shiny.imentalab.ca
-live site: https://shiny.imentalab.ca
+## shiny.imetalab.ca
+live site: https://shiny.imetalab.ca
 static from a template
 hold all links to the shiny apps
 
