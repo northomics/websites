@@ -1,5 +1,6 @@
 # Deposites for 3 dynamic website and a Resources folder
 
+![](https://github.com/northomics/websites/blob/main/resources/banner_logo.png)
 
 ## imetalab.ca
 live site: https://imetalab.ca
