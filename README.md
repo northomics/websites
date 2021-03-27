@@ -1,4 +1,4 @@
-# deposites for 3 dynamic webstes, inlucdin
+# deposites for 3 dynamic website
 
 ## imetalab.ca
 live site: https://imetalab.ca
