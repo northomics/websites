@@ -1,4 +1,5 @@
-# deposites for 3 dynamic website
+# Deposites for 3 dynamic website and a Resources folder
+
 
 ## imetalab.ca
 live site: https://imetalab.ca
@@ -17,3 +18,9 @@ hold all links to the shiny apps
  
  live site: https://wiki.imetalab.ca
  
+ 
+## Resouces
+holds reources accessible by http
+
+
+
