@@ -259,7 +259,11 @@ Error message and password prompt
 
 <li>$:/state/folded/$:/ControlPanel</li>
 
+<li>$:/state/folded/Metalab 2.1.1 Quick Start</li>
+
 <li>$:/state/folded/Update Event</li>
+
+<li>$:/state/folded/Welcome to iMetaWiki</li>
 
 <li>$:/state/folded/Welcome to MetaWiki</li>
 
@@ -341,6 +345,8 @@ Error message and password prompt
 
 <li>$:/view</li>
 
+<li>biom file</li>
+
 <li>Change log</li>
 
 <li>CheatSheet</li>
@@ -349,13 +355,15 @@ Error message and password prompt
 
 <li>Experiment VS meta information</li>
 
+<li>How does metalab annotate the database?</li>
+
 <li>How to upgrade from 1.0 to 2.0?</li>
 
 <li>Is MetaLab free?</li>
 
 <li>MetaLab</li>
 
-<li>Metalab 2.1.1 Quick Start</li>
+<li>Metalab 2.1.x Quick Start</li>
 
 <li>Metalab 2.x Quick Start</li>
 
@@ -11000,7 +11008,13 @@ very-muted-foreground: rgba(0, 0, 0, 0.12)</pre>
 <div created="20210309181353507" modified="20210309181422520" title="$:/state/folded/$:/ControlPanel">
 <pre>show</pre>
 </div>
+<div created="20210405231109144" modified="20210405231109144" title="$:/state/folded/Metalab 2.1.1 Quick Start">
+<pre>hide</pre>
+</div>
 <div created="20210316012536923" modified="20210316012537822" title="$:/state/folded/Update Event">
+<pre>show</pre>
+</div>
+<div created="20210405231111045" modified="20210405233010535" title="$:/state/folded/Welcome to iMetaWiki">
 <pre>show</pre>
 </div>
 <div created="20210309181432614" modified="20210311155726569" title="$:/state/folded/Welcome to MetaWiki">
@@ -11060,7 +11074,7 @@ very-muted-foreground: rgba(0, 0, 0, 0.12)</pre>
 <div created="20210311165505719" modified="20210316015245341" title="$:/state/tab/moresidebar-1850697562">
 <pre>$:/core/ui/MoreSideBar/Tags</pre>
 </div>
-<div created="20210307000610873" modified="20210323231049087" title="$:/state/tab/sidebar--595412856">
+<div created="20210307000610873" modified="20210406000624039" title="$:/state/tab/sidebar--595412856">
 <pre>$:/core/ui/SideBar/Open</pre>
 </div>
 <div created="20210307001608804" modified="20210307233909747" title="$:/state/tabs/controlpanel/toolbars-1345989671">
@@ -11069,7 +11083,7 @@ very-muted-foreground: rgba(0, 0, 0, 0.12)</pre>
 <div title="$:/status/RequireReloadDueToPluginChange">
 <pre>no</pre>
 </div>
-<div created="20210323232907108" list="[[Welcome to iMetaWiki]] [[Metalab 2.1.1 Quick Start]]" modified="20210323232907108" title="$:/StoryList">
+<div created="20210406000635719" list="[[Metalab 2.x Quick Start]] [[Welcome to iMetaWiki]]" modified="20210406000635719" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20210307001641863" list="$:/core/ui/EditorToolbar/paint $:/core/ui/EditorToolbar/opacity $:/core/ui/EditorToolbar/line-width $:/core/ui/EditorToolbar/rotate-left $:/core/ui/EditorToolbar/clear $:/core/ui/EditorToolbar/bold $:/core/ui/EditorToolbar/italic $:/core/ui/EditorToolbar/strikethrough $:/core/ui/EditorToolbar/underline $:/core/ui/EditorToolbar/superscript $:/core/ui/EditorToolbar/subscript $:/core/ui/EditorToolbar/mono-line $:/core/ui/EditorToolbar/linkify $:/core/ui/EditorToolbar/transcludify $:/core/ui/EditorToolbar/mono-block $:/core/ui/EditorToolbar/quote $:/core/ui/EditorToolbar/list-bullet $:/core/ui/EditorToolbar/list-number $:/core/ui/EditorToolbar/heading-1 $:/core/ui/EditorToolbar/heading-2 $:/core/ui/EditorToolbar/heading-3 $:/core/ui/EditorToolbar/heading-4 $:/core/ui/EditorToolbar/heading-5 $:/core/ui/EditorToolbar/heading-6 $:/core/ui/EditorToolbar/link $:/core/ui/EditorToolbar/excise $:/core/ui/EditorToolbar/picture $:/core/ui/EditorToolbar/stamp $:/core/ui/EditorToolbar/size $:/core/ui/EditorToolbar/editor-height $:/core/ui/EditorToolbar/more $:/core/ui/EditorToolbar/preview $:/core/ui/EditorToolbar/preview-type" modified="20210307001641863" title="$:/tags/EditorToolbar">
@@ -11299,6 +11313,29 @@ very-muted-foreground: rgba(0, 0, 0, 0.12)</pre>
 <div created="20210307001554171" modified="20210307152105778" title="$:/view">
 <pre>classic</pre>
 </div>
+<div created="20210405235115334" modified="20210405235335237" tags="FAQ output" title="biom file">
+<pre>! output: biom
+
+!! Purpose
+The purpose of biom file is for easy import into megan
+
+Megan is a powerful softeare for metegenomics OTU/taxon analysis and visualziation.
+
+With the biom output from Metalab, the taxon output with sample quantification information as columns, can be easily imported and displayed in Megan.
+
+!! Format
+file format: version 1.0
+
+!! Value
+intensity (mostly LFQ, could also be TMT intensity, or raw intensity), with some ajustment to be compatible with Megan, which only accest int as reads nuber. The int in java ranges from -2147483648 to 2147483647 (2E9)on 32 bit system. The intensity value from MS is easy to go beyond that value. Therefore in order to confine all values within that range, if the maximum value is higher than Integer.MAX_VALUE (which is 2147483647), an linear transformation is applied by dividing this factor:
+
+`(maxIntensity* 1000 / (double) Integer.MAX_VALUE + 1)`
+
+X1000 was applied to make the value more similiar to a read value.
+
+By this tranforming, the intensity can be treated as reads number.
+</pre>
+</div>
 <div created="20210307200445488" modified="20210316013136004" tags="update change TableOfContents" title="Change log">
 <pre>Current Version 2.1.1
 New features: 
@@ -11375,6 +11412,202 @@ The meta is optional, it does not affect anything during the automatic data anal
 
 </pre>
 </div>
+<div created="20210405235344190" modified="20210406000601776" tags="FAQ help TableOfContents" title="How does metalab annotate the database?">
+<pre>
+! Method to make the function.db for Metalab 2.1.x
+
+
+!! Preparation
+
+*  system: Linux 
+
+* Download and configure [[eggNOG mapper|https://github.com/eggnogdb/eggnog-mapper]] from Github. For detailed manual, see the [[wiki page|https://github.com/eggnogdb/eggnog-mapper/wiki/eggNOG-mapper-v2.0.0-v2.0.1]], available for other versions. Follow the instruction for installation. This example is in this directory: /home/t640/eggnog-mapper. 
+* Download the database:  `download_eggnog_data.py`
+This will fetch and decompress all precomputed eggNOG data into the data/ directory.
+
+
+!! Anatation
+
+Take the rate database [[rat_geneset.pep|https://drive.google.com/file/d/1yilSH-1s_YoRhvYnr39O8mVxExEqya6T/view?usp=sharing]] as an example:
+
+
+* split the database
+
+`split -l 2000000 -a 3 -d rat_geneset.pep  rat.chunk_`
+
+
+* generate the batch command under the bash:
+
+
+`for f in rat.chunk_*; do
+echo /home/zning/eggnog-mapper/emapper.py -m diamond --no_annot --no_file_comments --cpu 16 -i $f -o $f; 
+done`
+
+
+
+It will produce 
+
+```
+
+/home/t640/eggnog-mapper/emapper.py -m diamond --no_annot --no_file_comments --cpu 16 -i rat.chunk_000 -o rat.chunk_000
+/home/t640/eggnog-mapper/emapper.py -m diamond --no_annot --no_file_comments --cpu 16 -i rat.chunk_001 -o rat.chunk_001
+/home/t640/eggnog-mapper/emapper.py -m diamond --no_annot --no_file_comments --cpu 16 -i rat.chunk_002 -o rat.chunk_002
+/home/t640/eggnog-mapper/emapper.py -m diamond --no_annot --no_file_comments --cpu 16 -i rat.chunk_003 -o rat.chunk_003
+/home/t640/eggnog-mapper/emapper.py -m diamond --no_annot --no_file_comments --cpu 16 -i rat.chunk_004 -o rat.chunk_004
+/home/t640/eggnog-mapper/emapper.py -m diamond --no_annot --no_file_comments --cpu 16 -i rat.chunk_005 -o rat.chunk_005
+
+```
+
+Run the above command, it will produce
+
+```
+rat.chunk_000.emapper.seed_orthologs 
+rat.chunk_001.emapper.seed_orthologs 
+rat.chunk_002.emapper.seed_orthologs 
+rat.chunk_003.emapper.seed_orthologs 
+rat.chunk_004.emapper.seed_orthologs 
+rat.chunk_005.emapper.seed_orthologs 
+
+```
+
+These are the mapping files, with two columns, 1st column as protein header in target fasta file, 2nd column as protein name in NOG fasta. 
+
+
+Concatenate all chunk_*.emapper.seed_orthologs file.
+
+`cat rat.chunk_*.emapper.seed_orthologs &gt; rat.emapper.seed_orthologs`
+
+
+
+Run the orthologs search and annotation phase(10 cores in our example), reading from a fast disk.
+
+`/home/t640/eggnog-mapper/emapper.py --annotate_hits_table rat.emapper.seed_orthologs --no_file_comments -o rat --cpu 24`
+
+It will produce a file called **rat.emapper.annotations** which is the annotation file
+
+The file has 22 columns
+
+
+```
+1. query_name
+2. seed_eggNOG_ortholog
+3. seed_ortholog_evalue
+4. seed_ortholog_score
+5. best_tax_level
+6. Preferred_name
+7. GOs
+8. EC
+9. KEGG_ko
+10. KEGG_Pathway
+11. KEGG_Module
+12. KEGG_Reaction
+13. KEGG_rclass
+14. BRITE
+15. KEGG_TC
+16. CAZy
+17. BiGG_Reaction
+18. taxonomic scope
+19. eggNOG OGs
+20. best eggNOG OG
+21. COG Functional cat.
+22. eggNOG free text desc
+
+```
+These annatation files from different species (Now including &quot;chicken&quot;, &quot;dog&quot;, &quot;human&quot;,  &quot;mouse&quot;, &quot;pig&quot;, &quot;rat&quot;) are then put gother and compressed into [[func.db|(https://drive.google.com/file/d/10_Bo_uOelNZiV5pHCEhWxDN57O0Irknn/view?usp=sharing]] as sqlite3 format for faster parsing, with a bit tuning:
+* removing some columns(2~7)
+* adjusting some columnames (removing spaces)
+
+
+
+!! making the sql db using R as an example
+
+```
+
+library(RSQLite)
+
+# setup the column name
+
+col_names &lt;- str_split(&quot;query_name	seed_eggNOG_ortholog	seed_ortholog_evalue	seed_ortholog_score	best_tax_level	Preferred_name	GOs	EC	KEGG_ko	KEGG_Pathway	KEGG_Module	KEGG_Reaction	KEGG_rclass	BRITE	KEGG_TC	CAZy	BiGG_Reaction	taxonomic scope	eggNOG OGs	best eggNOG OG	COG Functional cat.	eggNOG free text desc&quot;,&quot;\t&quot;)[[1]]
+
+
+#  readin table, check if there are 4 lines as headers
+
+# create a database
+conn &lt;- dbConnect(SQLite(),'emapper5_annotations.db')
+
+# write data into annotation table for each species
+
+# with top 4 lines as header
+data_dog &lt;- read.delim(&quot;Z:\\Microbiome\\eggNOG5.0_database_organize\\eggnogmapper_annotation\\dog.emapper.annotations&quot;, header = FALSE,stringsAsFactors = FALSE, skip = 4 )
+colnames(data_dog) &lt;- col_names
+copy_to(conn, data_dog, &quot;dog&quot;, temporary = FALSE, indexes = list(&quot;query_name&quot;))
+rm(data_dog)
+gc()
+
+
+data_mouse &lt;- read.delim(&quot;Z:\\Microbiome\\eggNOG5.0_database_organize\\eggnogmapper_annotation\\mouse.emapper.annotations&quot;, header = FALSE,stringsAsFactors = FALSE, skip = 4 )
+colnames(data_mouse) &lt;- col_names
+copy_to(conn, data_mouse, &quot;mouse&quot;, temporary = FALSE, indexes = list(&quot;query_name&quot;))
+rm(data_mouse)
+gc()
+
+
+# Without header
+
+data_chicken &lt;- read.delim(&quot;Z:\\Microbiome\\eggNOG5.0_database_organize\\eggnogmapper_annotation\\chicken.emapper.annotations&quot;, header = FALSE,stringsAsFactors = FALSE, skip = 0 )
+colnames(data_chicken) &lt;- col_names
+copy_to(conn, data_chicken, &quot;chicken&quot;, temporary = FALSE, indexes = list(&quot;query_name&quot;))
+rm(data_chicken)
+gc()
+
+
+
+data_human &lt;- read.delim(&quot;Z:\\Microbiome\\eggNOG5.0_database_organize\\eggnogmapper_annotation\\human.emapper.annotations&quot;, header = FALSE,stringsAsFactors = FALSE, skip = 0)
+colnames(data_human) &lt;- col_names
+
+
+copy_to(conn, data_human, &quot;human&quot;, temporary = FALSE, indexes = list(&quot;query_name&quot;))
+rm(data_human)
+gc()
+
+data_rat &lt;- read.delim(&quot;Z:\\Microbiome\\eggNOG5.0_database_organize\\eggnogmapper_annotation\\rat.emapper.annotations&quot;, header = FALSE,stringsAsFactors = FALSE, skip = 0 )
+colnames(data_rat) &lt;- col_names
+copy_to(conn, data_rat, &quot;rat&quot;, temporary = FALSE, indexes = list(&quot;query_name&quot;))
+rm(data_rat)
+gc()
+
+
+data_pig &lt;- read.delim(&quot;Z:\\Microbiome\\eggNOG5.0_database_organize\\eggnogmapper_annotation\\pig.emapper.annotations&quot;, header = FALSE,stringsAsFactors = FALSE, skip = 0 )
+colnames(data_pig) &lt;- col_names
+copy_to(conn, data_pig, &quot;pig&quot;, temporary = FALSE, indexes = list(&quot;query_name&quot;))
+rm(data_pig)
+gc()
+
+
+# list tables
+dbListTables(conn)
+
+# list fildes/columns
+dbListFields(conn, &quot;sqlite_stat1&quot;)
+
+# disconnect database
+dbDisconnect(conn)
+
+```
+
+
+!! NOTE
+* The last version of functionation database was based on eggNOG 4.5. Instead of using eggNOG mapper, separate steps are connected to achive the teak 
+
+* Since version 2.1.1, the functionation annation database was generated by EggNOG mapper 2.0
+
+
+* Why use EggNOG database for annatation? eggNOG not only has the function(KO, GO) information, but also the NOG information, at all different taxon levels.
+
+
+
+</pre>
+</div>
 <div created="20210316014555346" modified="20210316014658487" tags="FAQ" title="How to upgrade from 1.0 to 2.0?">
 <pre>If you are users of MetaLab desktop 1.0, it is easy to upgrade. Just download the 2.0 and override everything from 1.0. All the databases, including the fasta, pept2taxa, and taxon annotations still work in 2.0. Copy everything into the Resource folder </pre>
 </div>
@@ -11384,7 +11617,7 @@ The meta is optional, it does not affect anything during the automatic data anal
 <div created="20210307005305689" modified="20210307201737319" tags="defination" title="MetaLab" type="">
 <pre>Matalab represents the whole framework, including the Metalab Desktop version, cloud implementation, automatic MetaReport, shiny apps for data visualization and analysis. We aim to make iMetaLab platform a free and one-stop toolset for metaproteomics, with increasing amount of tools under active development.</pre>
 </div>
-<div created="20210323222630271" modified="20210324140438450" tags="TableOfContents" title="Metalab 2.1.1 Quick Start">
+<div created="20210323222630271" modified="20210405232746577" tags="TableOfContents" title="Metalab 2.1.x Quick Start">
 <pre>''Metalab 2.1.x is still under active development. Let us know if you have any questions and suggestions (techteam.metalab@gmail.com).''
 
 
@@ -11412,13 +11645,13 @@ Some users reported an issue of not being able to display the full MetaLab windo
 ! ''Download MetaLab Desktop Version''
 !! ''Download the software''
 
-Download Metalab Desktop 2.1.1 via the link we provided, (contact us first via this [[techteam.metalab@gmail.com]], Please do not distribute the link. )  and then unzip it to a folder 
+Download Metalab Desktop 2.1.x via the link we provided, (contact us first via this [[techteam.metalab@gmail.com]], Please do not distribute the link. )  and then unzip it to a folder 
 
 ''Note!! Folder/PATH name Can Not Have Any space''.
 
 Recommended location:
 
-C:\Metalab\MetaLab_v2.1.1
+C:\Metalab\MetaLab_v2.1.x
 
 
 It will Looks like this:
@@ -11533,9 +11766,11 @@ Then you will need to install the Java Runtime Environment on your desktop.
 
 
 * If your java works fine, then go to your Metalab folder using CD command, e.g.
-cd C:\Metalab\MetaLab_v2.1.1
+`cd C:\Metalab\MetaLab_v2.1.1`
 
-Then run Metalab.bat
+Then run: 
+
+`Metalab.bat`
 
  &lt;div style=&quot;text-align:center;&quot;&gt;[img[img/man/man_bat.png]]&lt;/div&gt;
 
@@ -11565,27 +11800,36 @@ If not, uncheck the default then check again to restore the resource path in cas
 
 Users can also browse to the right location of each file if they are different from the default location.
 
-All the status column are checked with green color to ensure all functions of Metalab 2.1.1
+All the status column are checked with green color to ensure all functions of Metalab 2.1.x
 
 
  &lt;div style=&quot;text-align:center;&quot;&gt;[img[img/man/man_resource_2.1.1.png]]&lt;/div&gt;
 
 
 
+&lt;&lt;&lt;
+pep2taxa.gz can remain compressed (34G) form or decompressed (64G). 
+&lt;&lt;&lt;
+
+
+
 !!  ''Configure the Memory''
 
-The default memory/RAM usage is 4GB .For large scale data, edit the MetaLab.bat (right click&gt;&gt;edit)to change the maximum RAM usage to a larger value, like here 12g. It really depends on your PC configure. Usually use half to ¾ of your RAM.
+In the initial delivery of Metalab, the default memory/RAM usage is 8GB to start, and maximum of 16G . This can be changed in the metalab.bat file. (by right-click, and choose edit). Change this to bigger value if you have large RAM.
 
-java -Xmx12g -jar MetaLab.jar -gui
+`java -Xms8g -Xmx16g -jar Metalab.jar -gui`
+
+The flag Xmx specifies the maximum memory allocation pool for a Java Virtual Machine (JVM), while Xms specifies the initial memory allocation pool. This means that your JVM will be started with Xms amount of memory and will be able to use a maximum of Xmx amount of memory. 
+
 
  &lt;div style=&quot;text-align:center;&quot;&gt;[img[img/man/man_,memory.png]]&lt;/div&gt;
 
 
 ! ''Run MetaLab task''
 
-!! ''Choose Workflows in MetaLab 2.1.1''
+!! ''Choose Workflows in MetaLab 2.1.x''
 
-We have 5 workflows in MetaLab 2.1.1, preconfigured with different software modules. MaxQuant workflow is the most frequently used one. Here we take the maxquant workflow as a example.
+We have 5 workflows in MetaLab 2.1.x, preconfigured with different software modules. MaxQuant workflow is the most frequently used one. Here we take the maxquant workflow as a example.
 
  &lt;div style=&quot;text-align:center;&quot;&gt;[img[img/man/man_workflows.png]]&lt;/div&gt;
 
@@ -11693,7 +11937,7 @@ In the report folder under the search folder, you will be able to open an index.
 
 </pre>
 </div>
-<div created="20210307200519495" modified="20210323230840186" tags="TableOfContents" title="Metalab 2.x Quick Start">
+<div created="20210307200519495" modified="20210406000656664" tags="archived" title="Metalab 2.x Quick Start">
 <pre>''Metalab 2.x is still under active development. Let us know if you have any questions and suggestions (techteam.metalab@gmail.com).''
 
 
@@ -12071,12 +12315,12 @@ function mapping</pre>
 
 &lt;/div&gt;</pre>
 </div>
-<div created="20210307201827292" modified="20210323232039704" tags="Home" title="Welcome to iMetaWiki">
+<div created="20210307201827292" modified="20210405233038662" tags="Home" title="Welcome to iMetaWiki">
 <pre>! Documentation of Metalab suite
 
 [img width=600 [img/imetalab_framework.png]]
 
-Current Version: 2.1.1:  [[Quick setup for 2.1.1 Desktop|Metalab 2.1.1 Quick Start]]
+Current Version: 2.1.2:  [[Quick setup for 2.1.x Desktop|Metalab 2.1.x Quick Start]]
 
 See [ext[ TERMS|docs/terms.html]] for usage.
 
