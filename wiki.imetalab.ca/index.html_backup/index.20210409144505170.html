@@ -373,8 +373,6 @@ Error message and password prompt
 
 <li>MetaWiki</li>
 
-<li>MsFileReader</li>
-
 <li>nosub</li>
 
 <li>Reference</li>
@@ -11095,7 +11093,7 @@ very-muted-foreground: rgba(0, 0, 0, 0.12)</pre>
 <div title="$:/status/RequireReloadDueToPluginChange">
 <pre>no</pre>
 </div>
-<div created="20210422135224215" list="[[Welcome to iMetaWiki]] [[Metalab 2.1.x Quick Start]] MsFileReader" modified="20210422135224215" title="$:/StoryList">
+<div created="20210409143611376" list="[[Welcome to iMetaWiki]] [[Release Notes]]" modified="20210409143611376" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20210307001641863" list="$:/core/ui/EditorToolbar/paint $:/core/ui/EditorToolbar/opacity $:/core/ui/EditorToolbar/line-width $:/core/ui/EditorToolbar/rotate-left $:/core/ui/EditorToolbar/clear $:/core/ui/EditorToolbar/bold $:/core/ui/EditorToolbar/italic $:/core/ui/EditorToolbar/strikethrough $:/core/ui/EditorToolbar/underline $:/core/ui/EditorToolbar/superscript $:/core/ui/EditorToolbar/subscript $:/core/ui/EditorToolbar/mono-line $:/core/ui/EditorToolbar/linkify $:/core/ui/EditorToolbar/transcludify $:/core/ui/EditorToolbar/mono-block $:/core/ui/EditorToolbar/quote $:/core/ui/EditorToolbar/list-bullet $:/core/ui/EditorToolbar/list-number $:/core/ui/EditorToolbar/heading-1 $:/core/ui/EditorToolbar/heading-2 $:/core/ui/EditorToolbar/heading-3 $:/core/ui/EditorToolbar/heading-4 $:/core/ui/EditorToolbar/heading-5 $:/core/ui/EditorToolbar/heading-6 $:/core/ui/EditorToolbar/link $:/core/ui/EditorToolbar/excise $:/core/ui/EditorToolbar/picture $:/core/ui/EditorToolbar/stamp $:/core/ui/EditorToolbar/size $:/core/ui/EditorToolbar/editor-height $:/core/ui/EditorToolbar/more $:/core/ui/EditorToolbar/preview $:/core/ui/EditorToolbar/preview-type" modified="20210307001641863" title="$:/tags/EditorToolbar">
@@ -11608,7 +11606,7 @@ dbDisconnect(conn)
 <div created="20210307005305689" modified="20210307201737319" tags="defination" title="MetaLab" type="">
 <pre>Matalab represents the whole framework, including the Metalab Desktop version, cloud implementation, automatic MetaReport, shiny apps for data visualization and analysis. We aim to make iMetaLab platform a free and one-stop toolset for metaproteomics, with increasing amount of tools under active development.</pre>
 </div>
-<div created="20210323222630271" modified="20210422135419754" tags="TableOfContents" title="Metalab 2.1.x Quick Start">
+<div created="20210323222630271" modified="20210408042620299" tags="TableOfContents" title="Metalab 2.1.x Quick Start">
 <pre>''Metalab 2.1.x is still under active development. Let us know if you have any questions and suggestions (techteam.metalab@gmail.com).''
 
 
@@ -11703,7 +11701,7 @@ Important for a successful run!!, Please setup as instructed
 *  Java Runtime Environment. Metalab is written in java. Please Install java running environment first via this [[link|https://www.oracle.com/java/technologies/javase-jre8-downloads.html#license-lightbox]] Choose to download the one for Windows x64 79.5 MB  jre-8u271-windows-x64.exe
 
 
-* msfilereader: Click this link [[MsFileReader]] to install. It is needed to convert thermo raw file into .mgf file format. during the install accept •.NET framework to be installed along
+* msfilereader: Down msfilereader from this link and install. This is needed to convert thermo raw file into .mgf file format. during the install accept •.NET framework to be installed along
 
 
 * The flashLFQ module used in non-msfragger depends on the .NET Core 3.1, please install it from this [[link|https://dotnet.microsoft.com/download/dotnet/3.1]], choose the windows version x64 | x86 to install. 
@@ -12235,32 +12233,6 @@ In the report folder under the search folder, you will be able to open an index.
 </div>
 <div created="20210307202914864" modified="20210307202938496" tags="defination" title="MetaWiki">
 <pre>MetaWiki keeps updating all related documents</pre>
-</div>
-<div created="20210422134115690" modified="20210422135219699" tags="[[Welcome to iMetaWiki]] TableOfContents" title="MsFileReader">
-<pre>! Thermo MSFileReader
-
-The Thermo Raw File Reader DLL provides several methods for parsing the information returned by MSFileReader, including:
-
-* Determining the parent ion m/z and fragmentation mode in a given scan filter
-* Determining the Ionization mode from a given scan filter
-* Extracting MRM masses listed in a given scan filter
-* Reporting the number of spectra in the .Raw file
-* Returning details on a specific spectrum
-* Obtaining the raw m/z and intensity values for a given spectrum
-* Also available for download is a .NET command-line application that illustrates how to interface with ThermoRawFileReaderDLL.dll
-
-All third party software needs  RawFileReader to access Thermo raw files, by either incorporating the dll file in the software, or require users to install it separately. 
-
-There are several ways to get this file officially or through third-party:
-
-* [[Official website:|https://thermo.flexnetoperations.com/control/thmo/product?plneID=632401]], by creating an account [[here| https://thermo.flexnetoperations.com/control/thmo/login,]] then logging in and choosing &quot;Utility Software&quot;.
-* [[Github|https://github.com/frallain/pymsfilereader/tree/master/MSFileReader]]
-
-If you are not sure about your system, choose to install both 32bit and 64bit version. 
-
-Check the [[Manual|http://tools.thermofisher.com/content/sfs/manuals/Man-MSFileReader-22-Ref-A-EN.pdf]] for MsFileReader:
-
-</pre>
 </div>
 <div created="20210308023228564" modified="20210308023355691" tags="$:/tags/Stylesheet" title="nosub">
 <pre>.tc-subtitle {display:none;}</pre>
