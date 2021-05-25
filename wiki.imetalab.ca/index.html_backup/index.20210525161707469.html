@@ -273,6 +273,8 @@ Error message and password prompt
 
 <li>$:/state/image-picker/system--1365487189</li>
 
+<li>$:/state/image-picker/system--210374718</li>
+
 <li>$:/state/image-picker/system--282563066</li>
 
 <li>$:/state/image-picker/system-210629895</li>
@@ -357,6 +359,8 @@ Error message and password prompt
 
 <li>Experiment VS meta information</li>
 
+<li>FAQ</li>
+
 <li>How does metalab annotate the database?</li>
 
 <li>How to upgrade from 1.0 to 2.0?</li>
@@ -367,11 +371,15 @@ Error message and password prompt
 
 <li>Metalab 2.1.x Quick Start</li>
 
+<li>Metalab 2.2 Quick Start</li>
+
 <li>Metalab 2.x Quick Start</li>
 
 <li>MetaReport</li>
 
 <li>MetaWiki</li>
+
+<li>MsFileReader</li>
 
 <li>nosub</li>
 
@@ -11033,6 +11041,9 @@ very-muted-foreground: rgba(0, 0, 0, 0.12)</pre>
 <div created="20210307043228398" modified="20210307043229033" title="$:/state/image-picker/system--1365487189">
 <pre>hide</pre>
 </div>
+<div created="20210428163859618" modified="20210428163859618" title="$:/state/image-picker/system--210374718">
+<pre>show</pre>
+</div>
 <div created="20210307204206886" modified="20210307204206886" title="$:/state/image-picker/system--282563066">
 <pre>show</pre>
 </div>
@@ -11084,8 +11095,8 @@ very-muted-foreground: rgba(0, 0, 0, 0.12)</pre>
 <div created="20210311165505719" modified="20210316015245341" title="$:/state/tab/moresidebar-1850697562">
 <pre>$:/core/ui/MoreSideBar/Tags</pre>
 </div>
-<div created="20210307000610873" modified="20210408190158206" title="$:/state/tab/sidebar--595412856">
-<pre>$:/core/ui/SideBar/Open</pre>
+<div created="20210307000610873" modified="20210521204046531" title="$:/state/tab/sidebar--595412856">
+<pre>$:/core/ui/SideBar/Recent</pre>
 </div>
 <div created="20210307001608804" modified="20210307233909747" title="$:/state/tabs/controlpanel/toolbars-1345989671">
 <pre>$:/core/ui/ControlPanel/Toolbars/ViewToolbar</pre>
@@ -11093,7 +11104,7 @@ very-muted-foreground: rgba(0, 0, 0, 0.12)</pre>
 <div title="$:/status/RequireReloadDueToPluginChange">
 <pre>no</pre>
 </div>
-<div created="20210409143611376" list="[[Welcome to iMetaWiki]] [[Release Notes]]" modified="20210409143611376" title="$:/StoryList">
+<div created="20210521204110734" list="[[Is MetaLab free?]] [[Welcome to iMetaWiki]] FAQ [[Metalab 2.2 Quick Start]]" modified="20210525161153211" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20210307001641863" list="$:/core/ui/EditorToolbar/paint $:/core/ui/EditorToolbar/opacity $:/core/ui/EditorToolbar/line-width $:/core/ui/EditorToolbar/rotate-left $:/core/ui/EditorToolbar/clear $:/core/ui/EditorToolbar/bold $:/core/ui/EditorToolbar/italic $:/core/ui/EditorToolbar/strikethrough $:/core/ui/EditorToolbar/underline $:/core/ui/EditorToolbar/superscript $:/core/ui/EditorToolbar/subscript $:/core/ui/EditorToolbar/mono-line $:/core/ui/EditorToolbar/linkify $:/core/ui/EditorToolbar/transcludify $:/core/ui/EditorToolbar/mono-block $:/core/ui/EditorToolbar/quote $:/core/ui/EditorToolbar/list-bullet $:/core/ui/EditorToolbar/list-number $:/core/ui/EditorToolbar/heading-1 $:/core/ui/EditorToolbar/heading-2 $:/core/ui/EditorToolbar/heading-3 $:/core/ui/EditorToolbar/heading-4 $:/core/ui/EditorToolbar/heading-5 $:/core/ui/EditorToolbar/heading-6 $:/core/ui/EditorToolbar/link $:/core/ui/EditorToolbar/excise $:/core/ui/EditorToolbar/picture $:/core/ui/EditorToolbar/stamp $:/core/ui/EditorToolbar/size $:/core/ui/EditorToolbar/editor-height $:/core/ui/EditorToolbar/more $:/core/ui/EditorToolbar/preview $:/core/ui/EditorToolbar/preview-type" modified="20210307001641863" title="$:/tags/EditorToolbar">
@@ -11391,16 +11402,31 @@ with alternative text
 
 Visit us @ 451 Smyth Road, Ottawa, ON, Canada, K1H 8M5</pre>
 </div>
-<div created="20210316013155982" modified="20210316014206951" tags="FAQ" title="Experiment VS meta information">
-<pre>For example, we have a small project with two groups, 3 replicates each. We would like to set up 6 experiments, which will give us information about reproducible. By doing so, you will be able to get 6 columns of quantification information. This is the Experiment information. 
+<div created="20210316013155982" modified="20210427165311989" tags="FAQ TableOfContents" title="Experiment VS meta information">
+<pre>For example, we have a small project with two groups/conditions, [e.g. control and treatment], 3 replicates in each group. We would like to set up 6 experiments, which will give us information about repeatability. By doing so, you will be able to get 6 columns of quantification information. This is the Experiment information. 
 
-We also need another grouping information, to tell the first 3 raw files/samples are from the control group, while the rest 3 files/samples are from the treatment group, to do the statistic analysis, e.g. looking for differential expressed features among the two groups.
+We also need another grouping information, usually called meta in bioinformatics,  e.g. to tell the first 3 raw files/samples are from the control group, while the rest 3 files/samples/experiment are from the treatment group, to do the statistic analysis, e.g. looking for differential expressed features among the two groups.
 
-Meta info is not directly written/integrated into the result file, instead, it will be written into a separate .txt file, which will facilitate the [[ MetaReport |https://,metareport.imetalab.ca]]
+Meta info is not directly written/integrated into the result file, instead, it will be written into a separate tab delimited .txt file, which will facilitate the [[ MetaReport |https://report.imetalab.ca]]
 
-The meta is optional, it does not affect anything during the automatic data analysis. You can add up to 5 groups of meta. Only the first groups of meta will be used for [[ MetaReport |https://,metareport.imetalab.ca]] (If there is meta info).
+
+|!Raw File  | !Experiment | !meta1 |
+|Raw_file1.raw | PBS_1 | control |
+|Raw_file2.raw | PBS_2 | control |
+|Raw_file3.raw | PBS_3 | control |
+|Raw_file4.raw | KES_1 | treatment|
+|Raw_file5.raw | KES_2 | treatment|
+|Raw_file6.raw | KES_3 | treatment|
+
+Meta information is optional, report will still be generated without gouping/meta information Users can add up to 5 groups of meta. Currently only the first meta will be used for [[ MetaReport |https://report.imetalab.ca]] (If there is meta info). We are working on scripts to iterate all meta information for the report in the next version.
+
+
+
 
 </pre>
+</div>
+<div created="20210521204142789" modified="20210525161707336" tags="[[Welcome to iMetaWiki]] TableOfContents" title="FAQ">
+<pre>* [[Is MetaLab free?]]</pre>
 </div>
 <div created="20210405235344190" modified="20210406000601776" tags="FAQ help TableOfContents" title="How does metalab annotate the database?">
 <pre>! Method to make the function.db for Metalab 2.1.x
@@ -11600,13 +11626,19 @@ dbDisconnect(conn)
 <div created="20210316014555346" modified="20210316014658487" tags="FAQ" title="How to upgrade from 1.0 to 2.0?">
 <pre>If you are users of MetaLab desktop 1.0, it is easy to upgrade. Just download the 2.0 and override everything from 1.0. All the databases, including the fasta, pept2taxa, and taxon annotations still work in 2.0. Copy everything into the Resource folder </pre>
 </div>
-<div created="20210316014234521" modified="20210316014502456" tags="FAQ" title="Is MetaLab free?">
-<pre>The iMetalab platform (including Metalab Desktop, iMetalab Cloud, iMetaShiny apps) is completely free for academic and non-commercial users. For commercial use of iMetalab, please [[contact|Contact]] us via techteam.metalab@gmail.com</pre>
+<div created="20210316014234521" modified="20210525161608780" tags="FAQ" title="Is MetaLab free?">
+<pre>The iMetalab platform (including Metalab Desktop, iMetalab Cloud, iMetaShiny apps) is completely free for academic and non-commercial users. 
+
+For commercial use of iMetalab, we charge 5000 USD.
+
+Please [[contact|Contact]] us via techteam.metalab@gmail.com to have the latest download link. 
+During the first run, users will be asked to send a .properties file to send us to for the licence file to activate the Metalab. 
+</pre>
 </div>
 <div created="20210307005305689" modified="20210307201737319" tags="defination" title="MetaLab" type="">
 <pre>Matalab represents the whole framework, including the Metalab Desktop version, cloud implementation, automatic MetaReport, shiny apps for data visualization and analysis. We aim to make iMetaLab platform a free and one-stop toolset for metaproteomics, with increasing amount of tools under active development.</pre>
 </div>
-<div created="20210323222630271" modified="20210408042620299" tags="TableOfContents" title="Metalab 2.1.x Quick Start">
+<div created="20210323222630271" modified="20210422135419754" tags="TableOfContents" title="Metalab 2.1.x Quick Start">
 <pre>''Metalab 2.1.x is still under active development. Let us know if you have any questions and suggestions (techteam.metalab@gmail.com).''
 
 
@@ -11701,7 +11733,7 @@ Important for a successful run!!, Please setup as instructed
 *  Java Runtime Environment. Metalab is written in java. Please Install java running environment first via this [[link|https://www.oracle.com/java/technologies/javase-jre8-downloads.html#license-lightbox]] Choose to download the one for Windows x64 79.5 MB  jre-8u271-windows-x64.exe
 
 
-* msfilereader: Down msfilereader from this link and install. This is needed to convert thermo raw file into .mgf file format. during the install accept •.NET framework to be installed along
+* msfilereader: Click this link [[MsFileReader]] to install. It is needed to convert thermo raw file into .mgf file format. during the install accept •.NET framework to be installed along
 
 
 * The flashLFQ module used in non-msfragger depends on the .NET Core 3.1, please install it from this [[link|https://dotnet.microsoft.com/download/dotnet/3.1]], choose the windows version x64 | x86 to install. 
@@ -11816,6 +11848,309 @@ We have 5 workflows in MetaLab 2.1.x, preconfigured with different software modu
 
  &lt;div style=&quot;text-align:center;&quot;&gt;[img[img/man/man_workflows.png]]&lt;/div&gt;
 
+
+
+!! ''Load Raw files''
+
+Thermo raw is the main file type supported in MetaLab for database search.
+
+* “Add” button will guide you to browse raw files.
+* “Batch Load” can import a .txt file with the full path of .raw files
+* Result output path will be automatically set to the root directory of the first raw file. Of course, you can customize it if you want it to be in a different folder.
+
+ &lt;div style=&quot;text-align:center;&quot;&gt;[img[img/man/man_load.png]]&lt;/div&gt;
+
+
+!! ''Experiment Setting''
+
+We have designed an effective way to set up the experiment. For example, we have a small project with two groups, 3 replicates each. We would like to set up 6 experiments, which will give us information about reproducibility. In MaxQuant, we have to fill Experiment columns one-by-one or using Excel to edit the saved template and import it after. Here in MetaLab, you can just simply set the separator and choose the useful pieces of information to form the Experiment.
+
+ &lt;div style=&quot;text-align:center;&quot;&gt;[img[img/man/man_experiment.png]]&lt;/div&gt;
+
+If you are not satisfied with the Experiment name set automatically, you are still able to edit in-cell by double-clicking it.
+
+
+
+!! ''Set up .fasta database''
+
+Browse the .fasta database you download above (~3G).
+
+ &lt;div style=&quot;text-align:center;&quot;&gt;[img[img/man/man_fasta.png]]&lt;/div&gt;
+
+
+
+
+!! ''Setup modification, enzyme, quantification''
+
+ &lt;div style=&quot;text-align:center;&quot;&gt;[img[img/man/man_modification.png]]&lt;/div&gt;
+
+
+All the settings in this panel about modification, enzyme, digestion, cleavage are regular proteomics settings. The default values should be good for general purpose.
+
+
+!! ''Setup more parameters''
+
+Metalab can set the maximum number of threads to utilize during the search. Usually half of the system thread number is OK, but you can indefinitely increase it to the maximum of the system threads.
+
+Low-resolution MS1 data type is not supported anymore. High resolution on both MS1 and MS2 (high-high) are preferred. You need to set this up for your specific data type. MS2 scan mode should be setup to FTMS for Exactive high resolution data, while ITMS for ion trap low resolution data.
+
+All other settings can be set default as shown below.
+
+ &lt;div style=&quot;text-align:center;&quot;&gt;[img[img/man/man_more.png]]&lt;/div&gt;
+
+
+! ''Start Running''
+
+
+After setting up all parameters, you can review all parameters before hitting the “Start” button.
+
+Running information should show in the console panel on the right. Once everything finished, you can click the View to view the report
+
+ &lt;div style=&quot;text-align:center;&quot;&gt;[img[img/man/man_finish.png]]&lt;/div&gt;
+
+
+
+Once started, all console information will be displayed in the right window. Error information can be attached when you report the issue to techteam.metalab@gmail.com
+
+
+! ''Result files''
+After a successful run,  a report is generated to describe your data.You can click the view button to see the report in the browser.
+
+Click the menu on the left to get summaries.
+
+ &lt;div style=&quot;text-align:center;&quot;&gt;[img[img/man/man_report.png]]&lt;/div&gt;
+
+
+A MetaLab folder is generated to hold all result files in the same folder as the raw files, or as the user set. In the folder, you will see folders like down below depending on the workflows you choose(e.g., 1st workflow will have a fold called maxquant_search).
+
+In the report folder under the search folder, you will be able to open an index.html to find all reports.
+
+
+ &lt;div style=&quot;text-align:center;&quot;&gt;[img[img/man/man_result_folder1.png]]&lt;/div&gt;
+
+ &lt;div style=&quot;text-align:center;&quot;&gt;[img[img/man/man_result_folder2.png]]&lt;/div&gt;
+
+ &lt;div style=&quot;text-align:center;&quot;&gt;[img[img/man/man_result_folder3.png]]&lt;/div&gt;
+
+ &lt;div style=&quot;text-align:center;&quot;&gt;[img[img/man/man_result_folder4.png]]&lt;/div&gt;
+
+
+! ''Result files''
+
+
+|!File name|!Description||
+|**.allPepTaxa.csv |Peptides and all the corresponding organisms (taxa) before the lowest common ancestor calculation ||
+|**.pepTaxa.csv|Peptides and the corresponding lowest common ancestors (LCA) ||
+|**.taxa.all.csv|All the taxa identified from the experiment. Eight ranks (Superkingdom, Kingdom, Phylum, Class, Order, Family, Genus and Species) are included. The intensity of each node is the total intensity (the sum of the intensity of all the peptides from this taxon, including peptides with LCA at this taxon, and peptides with LCA at all the children nodes of this taxon)||
+|**.taxa.refine.csv |Taxa with at least N (a user defined unique peptide count threshold which is set in the “Setting” panel) unique peptides from the experiment||
+|**.iMetaLab.tree.csv|A tree structure dataset ||
+
+
+ /** represent the method used for peptides and taxa matching, “Builtin” represents a built-in peptide-to-taxa database is used; “Unipept” represent a web based tool Unipept (http://unipept.ugent.be/) is used
+
+
+
+</pre>
+</div>
+<div created="20210428144153101" modified="20210510143552645" tags="TableOfContents" title="Metalab 2.2 Quick Start">
+<pre>''Metalab 2.2 is still under active development. Let us know if you have any questions and suggestions (techteam.metalab@gmail.com).''
+
+
+! ''Operating system''
+
+Metalab 2.X Desktop runs__'' only on windows''__ (7 and, 8, 10, server 2003 and up).
+
+If you are dealing with only a few raw files (e.g. less than 20), an ordinary PC will do the work. Empirically, a 2hr gradient raw file from Q Exactive will take hours (up to overnight) to finish on an i5, 8G RAM PC. (Metaproteomics database search takes longer time the classical proteomics, because of the larger fasta database and usually required multi-pass searching strategy)
+
+For large scale data set, let’s say 50 raw files up to hundreds of raw files in a project, we suggest:
+
+CPU: Intel i7/ Xeon, 24 threads up
+RAM: 32 GB and up, the larger the better. You can also change the RAM in the metalab.bat file
+Disk space: 1T and up SSD is strongly recommended. An additional large volume hard drive is recommended for data storage, or high-speed NAS could be also mapped for large data storage (We use Synology NAS in our lab)
+However, slower PCs still can manage at a slower speed.
+
+
+!! ''Screen resolution''
+Some users reported an issue of not being able to display the full MetaLab window. Metalab is developed and tested on computers with a minimum resolution of 1920X1080. We have further tested on a lower resolution of 1280X1024, which also works. If your  resolution is less than that, it might not be able to show the full window. On windows 10, make sure to change the scale and layout to 100%.
+
+
+[img[img/man/manual_res.png]]
+
+
+
+! ''Download the software''
+
+Download Metalab Desktop 2.x via the link we provided, (contact us first via this [[techteam.metalab@gmail.com]], Please do not distribute the link. )  and then unzip it to a folder 
+
+''Note!! Folder/PATH name SHOULD NOT Have Any space''.
+
+Recommended location:
+
+C:\Metalab\MetaLab_v2.x
+
+
+It will Looks like this:
+
+[img[img/man22/main_path.png]]
+
+
+
+! ''Environment Setup''
+
+Important for a successful run!!, Please setup as instructed
+
+*  Java Runtime Environment. Metalab is written in java. Please Install java running environment first via this [[link|https://www.oracle.com/java/technologies/javase-jre8-downloads.html#license-lightbox]] Choose to download the one for Windows x64 79.5 MB  jre-8u271-windows-x64.exe
+
+
+* msfilereader: Click this link [[MsFileReader]] to install. It is needed to convert thermo raw file into .mgf file format. during the install accept •.NET framework to be installed along
+
+
+* Internet Access: There are two steps requiring internet access. One is the option of taxonomy analysis by Unipept, which can be opted to use a local database (built in pep2taxa/pep2taxa.gz). The other Meta-report, which needs an external R opencpu server. No internet, no report, but all identification and quantification result are still generated without sacrifice.
+
+! ''Run MetaLab for the first time''
+
+By double click the ''Metalab.bat'' (the one with the icon of little gears),'' NOT the Metalab.jar''
+
+[img[img/man22/main_path_run.png]]
+
+You will be able to see a window pop out:
+
+ &lt;div style=&quot;text-align:center;&quot;&gt;[img[img/man22/man_1st.png]]&lt;/div&gt;
+
+
+Congrats, this is supposed to be the default user interface once MetaLab is successfully loaded.
+
+If you do not see the window, or a window flash out, please run the Metalab.bat manually as follows.
+
+* Open the command prompt. Follow the menu path Start &gt; Programs &gt; Accessories &gt; Command Prompt
+
+* Type: java -version and press Enter on your keyboard.
+
+Result: A message similar to the following indicates that Java is installed and you are ready to use MITSIS via the Java Runtime Environment
+Java version &quot;1.4.x_xx&quot; (or a higher version)
+Java&lt;TM&gt; SE Runtime Environment &lt;build .....&gt;
+Java hotspot&lt;TM&gt; Client VM &lt;build .....&gt;
+
+E.g
+
+ &lt;div style=&quot;text-align:center;&quot;&gt;[img[img/man/man_java.png]]&lt;/div&gt;
+
+
+
+However, if you receive a message with a version lower than &quot;1.4&quot;, or any type of error message, or a message similar to:
+
+Java command not found
+
+Then you will need to install the Java Runtime Environment on your desktop.
+
+
+* If your java works fine, then go to your Metalab folder using CD command, e.g.
+`cd C:\Metalab\MetaLab_v2.2`
+
+Then run: 
+
+`Metalab.bat`
+
+Let us know the error message.
+
+!'' Register''
+Go to tools&gt;activation to open the activation window,
+ 
+[img[img/man22/activation.png]]
+
+Please following these instruction to activate the MetaLab:
+1. Generate a license property file from the above panel, then send it to
+ techteam.metalab@gmail.com;
+2. We will send you the license as soon as we received your information;
+3. Install the license.
+
+
+
+! ''Download annotation database ''
+ A large number of resource files (external tools and database) are also included in the package for the downstream metaproteomic analysis. We have included most resources in the same zip file you just downloaded, but not all. 
+
+You still need to download the file for'' taxon analysis database'' (''NOT ''needed if you choose to use [[unipept|https://unipept.ugent.be/]] to do the taxon analysis) and ''function annotation database''.  Users can download these two files from the link we provide from google drive,  or via these links: 
+[[func.db|https://drive.google.com/file/d/10_Bo_uOelNZiV5pHCEhWxDN57O0Irknn/view?usp=sharing]]
+[[pep2taxa.gz|https://drive.google.com/file/d/11nZGIiFduFqBi0Lwi1SAOxSqNm41IFU6/view?usp=sharing]]
+
+
+For users who do not have access to google drive, these two files can be downloaded using the builtin function of Metalab (Menu&gt; Tools &gt; Download database), with a ''slower speed''. 
+
+
+''Be sure to put these files in the corresponding resource folder in Metalab. ''
+
+* func.db in Resources\function
+* pep2taxa.gz in Resources\pep2taxa
+
+
+The Resource folder will look like this:
+
+[img[img/man22/resource_structure.png]]
+
+
+
+!'' Download .fasta files for your research project''
+We have placed a copy of frequently used fasta files in the download link we provide.
+Only download the one for your project. These fasta files can be placed anywhere.
+
+The function.db has annotation database for human, mouse, dog, pig chicken and rat for the fasta files we provide. If you choose to use your own fasta, function annotation will not work.
+
+Alternative links to download:
+
+* [[Human|https://drive.google.com/file/d/1WAZWlrX2ACalMZOVMNSCeGfRat2Aqdja/view?usp=sharing]]
+* [[Mouse|http://gigadb.org/dataset/view/id/100114/token/mZlMYJIF04LshpgP]]
+* [[Dog|https://zenodo.org/record/1198434#.XTIzHOhKiUk]]
+* [[Pig|ftp://ftp.agis.org.cn/~fanwei/Chicken_gut_metagenome]]
+* [[Chicken|http://gigadb.org/dataset/view/id/100187/token/F4CDHYruxobOKmsE]]
+* [[Rat|http://gigadb.org/dataset/100440]]
+
+Human and mouse database can also be downloaded using the built-in tool (Menu&gt; Tools &gt; Download database) as shown above. 
+
+
+
+! ''Configure''
+
+!! ''Configure the Resource path''
+
+Metalab needs quite a few external modules/software and self-made databases to run, for protein identification and taxon/function mapping. We place all these resources in the Resource folder.
+
+Run Metalab by double click the icon of  Metalab.bat
+
+In the menu, setting &gt; resource
+
+If as instructed from above, all green/check marks should be seen like this:
+&lt;div style=&quot;text-align:center;&quot;&gt;[img[img/man22/resource_settings.png]]&lt;/div&gt;
+
+
+Make sure all paths (at least the needed modules) are ''green'', which means correctly configured.
+
+Users can also browse to the right location of each file if they are different from the default location.
+
+
+
+&lt;&lt;&lt;
+pep2taxa.gz can remain compressed (34G) form or decompressed (64G). 
+&lt;&lt;&lt;
+
+
+
+!!  ''Configure the Memory''
+
+In the initial delivery of Metalab, the default memory/RAM usage is 8GB to start, and maximum of 16G . This can be changed in the metalab.bat file. (by right-click, and choose edit). Change this to bigger value if you have large RAM.
+
+`java -Xms8g -Xmx16g -jar Metalab.jar -gui`
+
+The flag Xmx specifies the maximum memory allocation pool for a Java Virtual Machine (JVM), while Xms specifies the initial memory allocation pool. This means that your JVM will be started with Xms amount of memory and will be able to use a maximum of Xmx amount of memory. 
+
+
+
+! ''Run MetaLab task''
+
+!! ''Choose Workflows in MetaLab 2.2''
+
+We have 5 workflows in MetaLab 2.2, preconfigured with different software modules. MaxQuant workflow is the most frequently used one. Here we take the maxquant workflow as a example.
+
+ &lt;div style=&quot;text-align:center;&quot;&gt;[img[img/man/man_workflows.png]]&lt;/div&gt;
 
 
 !! ''Load Raw files''
@@ -12234,6 +12569,33 @@ In the report folder under the search folder, you will be able to open an index.
 <div created="20210307202914864" modified="20210307202938496" tags="defination" title="MetaWiki">
 <pre>MetaWiki keeps updating all related documents</pre>
 </div>
+<div created="20210422134115690" modified="20210422145536406" tags="[[Welcome to iMetaWiki]] TableOfContents" title="MsFileReader">
+<pre>! Thermo MSFileReader
+
+The Thermo Raw File Reader DLL provides several methods for parsing the information returned by MSFileReader, including:
+
+* Determining the parent ion m/z and fragmentation mode in a given scan filter
+* Determining the Ionization mode from a given scan filter
+* Extracting MRM masses listed in a given scan filter
+* Reporting the number of spectra in the .Raw file
+* Returning details on a specific spectrum
+* Obtaining the raw m/z and intensity values for a given spectrum
+* Also available for download is a .NET command-line application that illustrates how to interface with ThermoRawFileReaderDLL.dll
+
+All third party software needs  RawFileReader to access Thermo raw files, by either incorporating the dll file in the software, or require users to install it separately. 
+
+Download this file from official site or through third-party:
+
+* [[Github for all versions|https://github.com/frallain/pymsfilereader/tree/master/MSFileReader]]
+* [[Official website for 3.0|https://thermo.flexnetoperations.com/control/thmo/download?element=6306677]]
+* [[Script Institute for 2.2|http://fields.scripps.edu/rawconv/download/MSFileReader%202.2.62.zip]]
+
+Make sure install both 32bit and 64bit version. 
+
+Check the [[Manual|http://tools.thermofisher.com/content/sfs/manuals/Man-MSFileReader-22-Ref-A-EN.pdf]] for MsFileReader:
+
+</pre>
+</div>
 <div created="20210308023228564" modified="20210308023355691" tags="$:/tags/Stylesheet" title="nosub">
 <pre>.tc-subtitle {display:none;}</pre>
 </div>
@@ -12277,8 +12639,18 @@ All these modules can be accessed by imetalab.ca
 
 [img[img/modules.png]]</pre>
 </div>
-<div created="20210408035152750" modified="20210409143742144" tags="[[Welcome to iMetaWiki]] TableOfContents" title="Release Notes">
-<pre>! 2.1.2
+<div created="20210408035152750" modified="20210510143153494" tags="[[Welcome to iMetaWiki]] TableOfContents" title="Release Notes">
+<pre>! 2.2 @20210510
+* function fails due o the resource path configure (@20210510)
+* wrap into exe, comes along with the jre environment
+
+! 2.2 @20210426
+
+* licencing module in-place
+* Resource path bug fix
+
+
+! 2.1.2
 
 *Fixed the issue that the program stuck at the taxonomy analysis step;
 *Fixed the bug causing the error when export the function annotation result (this bug is from switching to the new function database);
@@ -12331,17 +12703,17 @@ function mapping</pre>
 
 &lt;/div&gt;</pre>
 </div>
-<div created="20210307201827292" modified="20210409144452695" tags="Home" title="Welcome to iMetaWiki">
+<div created="20210307201827292" modified="20210510143448191" tags="Home" title="Welcome to iMetaWiki">
 <pre>! Documentation of Metalab suite
 
 [img width=600 [img/imetalab_framework.png]]
 
-* Latest Version: 2.1.2
+* Latest Version: 2.2, [[Quick setup for 2.2 Desktop|Metalab 2.2 Quick Start]]
 
-* [[Quick setup for 2.1.x Desktop|Metalab 2.1.x Quick Start]]
 * [[Release Notes|Release Notes]]
 
 * [ext[ TERMS|docs/terms.html]] for usage.
+
 *[[ Reference|Reference]] for details about how Metalab works.
 
 Quick Links: [[ iMetalab|https://imetalab.ca]], [[ iMetaShiny|https://shiny.imetalab.ca]], [[ MetaReport Demo|https://report.imetalab.ca/]],  [[ Metalab Cloud|http://dashboard.imetalab.ca/]] 
