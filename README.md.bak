@@ -13,15 +13,8 @@ live site: https://shiny.imetalab.ca
 static, hold all links to the shiny apps hosted on dynamic shiny servers
 
 
-
-## wiki.imetalab.ca_WP_BK
-An old wiki wordpress website exported by wp2static plugin 
-not used anymore
-
-
-There is another deoposit for wiki.imetalab.ca
-https://github.com/northomics/wiki.imetalab.ca
-it is a tiddly wiki site source file
+## wiki.imetalab.ca
+tiddly wiki site source file
 live site: https://wiki.imetalab.ca
 
 
